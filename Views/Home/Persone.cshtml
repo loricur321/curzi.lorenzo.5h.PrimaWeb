@@ -1,0 +1,66 @@
+﻿@* @model List<Persona> *@
+
+@{
+    ViewData["Title"] = "Elenco Persone";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Persone</h1>
+
+    <table border="2">
+        <tr>
+            <th>
+                Id
+            </th>
+
+            <th>
+                Nome
+            </th>
+
+            <th>
+                Cognome
+            </th>
+
+            <th>
+                Email
+            </th>
+        </tr>
+        
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>
+                        @p.ID
+                    </td>
+
+                    <td>
+                        @p.Nome
+                    </td>
+
+                    <td>
+                        @p.Cognome
+                    </td>
+
+                    <td>
+                        @p.Email
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+        @* <tr>
+            <td>
+                1
+            </td>
+
+            <td>
+                Lorenzo
+            </td>
+
+            <td>
+                Curzi
+            </td>
+        </tr> *@
+    </table>
+</div>
