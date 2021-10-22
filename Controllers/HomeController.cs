@@ -30,25 +30,27 @@ namespace curzi.lorenzo._5h.PrimaWeb.Controllers
 
         public IActionResult Persone()
         {
-            List<Persona> p = new List<Persona>();
-            p.Add(
-                new Persona{
-                    ID = 1,
-                    Nome = "Lorenzo",
-                    Cognome = "Curzi",
-                    Email = "lorenzo.curzi@studenti.ittsrimini.edu.it"
-                }
-            );
+            // List<Persona> p = new List<Persona>();
+            // p.Add(
+            //     new Persona{
+            //         ID = 1,
+            //         Nome = "Lorenzo",
+            //         Cognome = "Curzi",
+            //         Email = "lorenzo.curzi@studenti.ittsrimini.edu.it"
+            //     }
+            // );
 
-            p.Add(
-                new Persona{
-                    ID = 2,
-                    Nome = "Maurizio",
-                    Cognome = "Conti",
-                    Email = "maurizio.conti@ittsrimini.edu.it"
-                }
-            );
-            return View(p);
+            // p.Add(
+            //     new Persona{
+            //         ID = 2,
+            //         Nome = "Maurizio",
+            //         Cognome = "Conti",
+            //         Email = "maurizio.conti@ittsrimini.edu.it"
+            //     }
+            // );
+
+            var db =  new PersoneContext();           
+            return View(db.Persone);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

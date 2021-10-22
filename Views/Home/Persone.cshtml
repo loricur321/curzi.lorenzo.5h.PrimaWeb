@@ -1,4 +1,10 @@
-﻿@* @model List<Persona> *@
+﻿@* Nome completo *@
+@* @model Microsoft.EntityFrameworkCore.DbSet<Persona>; *@
+
+@* Secondo metodo utilizzando lo using *@
+@using Microsoft.EntityFrameworkCore;
+
+@model DbSet<Persona>;
 
 @{
     ViewData["Title"] = "Elenco Persone";
